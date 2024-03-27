@@ -36,8 +36,8 @@ jobs:
       uses: docker/login-action@v3
       with:
         registry : harbor.venroot.de
-        username: ${{ secrets.HARBOR_ROBOT_NAME }}
-        password: ${{ secrets.HARBOR_ROBOT_SECRET }}
+        username: ${{ secrets.HARBOR_USERNAME }}
+        password: ${{ secrets.HARBOR_SECRET }}
 
     - name: Build and push Docker Image
       uses: docker/build-push-action@v3
